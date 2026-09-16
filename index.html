@@ -207,6 +207,17 @@ section{padding:90px 0;position:relative}
 .tag-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
 .tag{font-family:var(--mono);font-size:11px;color:var(--muted);border:1px solid var(--line);border-radius:6px;padding:4px 9px;letter-spacing:.02em}
 
+/* ---- role branches (RNT: CV + LLM) ---- */
+.branches{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px;max-width:640px}
+@media(max-width:640px){.branches{grid-template-columns:1fr}}
+.branch{border:1px solid var(--line);border-left:2px solid var(--accent);border-radius:0 10px 10px 0;padding:16px 18px;background:var(--surface)}
+.branch .bh{font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin-bottom:9px}
+.branch .bt{font-size:15px;font-weight:600;letter-spacing:-.01em;margin-bottom:8px}
+.branch p{color:var(--muted);font-weight:300;font-size:13.5px;line-height:1.55}
+.branch p strong{color:var(--text);font-weight:600}
+.branch .bsee{color:var(--cyan);font-weight:400}
+.branch .btags{font-family:var(--mono);font-size:10.5px;color:var(--muted-2);margin-top:12px;letter-spacing:.02em}
+
 /* ---- projects grid ---- */
 .proj-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
 @media(max-width:760px){.proj-grid{grid-template-columns:1fr}}
@@ -221,6 +232,7 @@ section{padding:90px 0;position:relative}
 .proj .ptop{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:14px}
 .proj .pcat{font-family:var(--mono);font-size:10.5px;color:var(--accent);text-transform:uppercase;letter-spacing:.08em}
 .proj .parrow{color:var(--muted);transition:transform .25s}
+.proj .pnote{font-family:var(--mono);font-size:10px;color:var(--muted-2);letter-spacing:.03em;text-transform:uppercase;padding-top:2px}
 .proj:hover .parrow{transform:translate(3px,-3px);color:var(--accent)}
 .proj h3{font-size:19px;font-weight:600;letter-spacing:-.01em;margin-bottom:10px;line-height:1.25}
 .proj p{color:var(--muted);font-size:14px;font-weight:300;line-height:1.55;flex:1}
@@ -287,7 +299,7 @@ footer{padding:50px 0 70px;border-top:1px solid var(--line-2);margin-top:20px}
           <span class="ln"><span>BEHNAL</span></span>
         </h1>
         <p class="tagline">
-          I make computer-vision models <b>small enough and fast enough</b> to run where it actually matters — <span class="hl">on the device</span>, in real time.
+          I make AI models <b>small enough and fast enough</b> to run where it actually matters — <span class="hl">on the device</span>, offline, in real time.
         </p>
         <p class="subline">
           // ex-Bosch · IIT Bombay · incoming M.Sc. @ RWTH Aachen, Oct 2026
@@ -325,9 +337,8 @@ footer{padding:50px 0 70px;border-top:1px solid var(--line-2);margin-top:20px}
     <!-- metric strip -->
     <div class="metrics">
       <div class="metric"><div class="num">2<span class="u">+</span></div><div class="lbl">Years shipping CV in production</div></div>
-      <div class="metric"><div class="num">57.1<span class="u">%</span></div><div class="lbl">Inference time cut (JAX)</div></div>
-      <!-- PLACEHOLDER: replace with a real number — e.g. edge FPS, model size reduction, devices deployed -->
-      <div class="metric"><div class="num"> ~3x <span class="u">×</span></div><div class="lbl">Edge speedup</div></div>
+      <div class="metric"><div class="num">RWTH</div><div class="lbl">Incoming M.Sc. · Robotic Systems (RoboSys)</div></div>
+      <div class="metric"><div class="num">~3<span class="u">×</span></div><div class="lbl">Edge inference speedup</div></div>
       <div class="metric"><div class="num">IITB</div><div class="lbl">B.Tech + AI/DS minor</div></div>
     </div>
   </div>
@@ -340,9 +351,9 @@ footer{padding:50px 0 70px;border-top:1px solid var(--line-2);margin-top:20px}
       <div class="status-bar"><span class="dot"></span>// CURRENT STATUS — LAST UPDATED JUL 2026</div>
       <div class="status-rows">
         <div class="status-cell">
-          <div class="k">Now</div>
-          <div class="v">Computer Vision Engineer</div>
-          <div class="vsub">RNT Health Insights — real-time AI on GPU-accelerated edge devices</div>
+          <div class="k">Just wrapped</div>
+          <div class="v">CV / Edge AI Engineer</div>
+          <div class="vsub">RNT Health Insights — on-device CV &amp; LLM systems (2025–2026)</div>
         </div>
         <div class="status-cell">
           <div class="k">Next</div>
@@ -370,12 +381,25 @@ footer{padding:50px 0 70px;border-top:1px solid var(--line-2);margin-top:20px}
 
     <div class="reveal">
       <div class="exp-item">
-        <div class="exp-meta"><span class="when">2025 — NOW</span>Computer Vision Engineer<span class="where">Chandigarh, India</span></div>
+        <div class="exp-meta"><span class="when">2025 — 2026</span>Computer Vision / Edge AI Engineer<span class="where">Chandigarh, India</span></div>
         <div>
-          <div class="exp-role">Real-time medical CV on edge GPUs</div>
+          <div class="exp-role">Edge AI for clinical workflows</div>
           <a class="exp-org" href="https://www.rntinsights.com/" target="_blank" rel="noopener">RNT Health Insights →</a>
-          <p class="exp-body">Building and deploying <strong>real-time AI on GPU-accelerated edge devices</strong> for medical imaging, optimizing on-device throughput so models run fast enough to be clinically useful. <em>[Add a concrete number: target FPS, latency budget, or throughput gain.]</em></p>
-          <div class="tag-row"><span class="tag">Edge GPU</span><span class="tag">Medical imaging</span><span class="tag">Real-time inference</span></div>
+          <p class="exp-body">Ship <strong>on-device AI for clinical settings</strong> on NVIDIA Jetson hardware — where patient data can't leave the machine. Two edge workstreams:</p>
+          <div class="branches">
+            <div class="branch">
+              <div class="bh">Computer Vision · Edge</div>
+              <div class="bt">Real-time endoscopy assistance</div>
+              <p>Built an <strong>image-retrieval pipeline that auto-captures landmark screenshots during endoscopy</strong>, so the operator can focus entirely on screening instead of documentation. Deployed alongside real-time medical CV models optimized for on-device throughput.</p>
+              <div class="btags">Image retrieval · Real-time CV · Jetson · TensorRT</div>
+            </div>
+            <div class="branch">
+              <div class="bh">Language Models · Edge</div>
+              <div class="bt">Offline speech-to-report</div>
+              <p>Rebuilt doctor-dictation → structured PDF reports from a cloud API into a <strong>fully offline</strong> Qwen2.5-7B + medical-ASR stack on Jetson AGX, with an eval-driven prompt pipeline and deterministic ASR correction. <span class="bsee">Full write-up below ↓</span></p>
+              <div class="btags">Offline LLM · llama.cpp · Prompt eval · Flask</div>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -384,7 +408,7 @@ footer{padding:50px 0 70px;border-top:1px solid var(--line-2);margin-top:20px}
         <div>
           <div class="exp-role">Shrinking models for on-device robotics</div>
           <a class="exp-org" href="https://www.letsnosh.io/" target="_blank" rel="noopener">Nosh Robotics · Euphotic Labs →</a>
-          <p class="exp-body">Full-stack CV engineer for an autonomous cooking robot. Used <strong>knowledge distillation and quantization</strong> to hit real-time performance on constrained hardware, and built novel applications including an LLM-driven recipe tool and a hybrid recommender. <em>[Add the win: e.g. "X% smaller model at same accuracy" or "from N to M FPS."]</em></p>
+          <p class="exp-body">Full-stack CV engineer for an autonomous cooking robot. Used <strong>knowledge distillation and quantization</strong> to hit real-time performance on constrained hardware, and built novel applications including an LLM-driven recipe tool and a hybrid recommender.</p>
           <div class="tag-row"><span class="tag">Quantization</span><span class="tag">Knowledge distillation</span><span class="tag">LLM tooling</span><span class="tag">Recommenders</span></div>
         </div>
       </div>
@@ -454,15 +478,23 @@ footer{padding:50px 0 70px;border-top:1px solid var(--line-2);margin-top:20px}
 
     <div class="proj-grid reveal">
 
-      <!-- PLACEHOLDER / HIGH PRIORITY: your ByteTracker + TensorRT edge work. This is your Germany differentiator.
-           Add: what it tracks, the hardware, before/after latency or FPS, and a repo link. -->
-      <a class="proj" href="#" style="border-color:rgba(255,94,31,.4);background:var(--accent-soft)">
-        <div class="ptop"><span class="pcat">★ Edge deployment — ADD THIS</span><span class="parrow">↗</span></div>
-        <h3>Real-time multi-object tracking on edge (ByteTrack + TensorRT)</h3>
-        <p>Your headline deployment project lives here. Drop in the pipeline, the target device, and the latency/FPS numbers — this is the single most convincing thing on the page for a German deep-tech recruiter.</p>
-        <div class="pmetric">▸ ~3x FPS @ Jetson AGX Orin, &lt;25ms latency"</div>
+      <!-- FEATURED SHOWPIECE — offline medical speech-to-report on Jetson AGX -->
+      <div class="proj feat" style="border-color:rgba(255,94,31,.4);background:var(--accent-soft)">
+        <div class="ptop"><span class="pcat">★ Edge deployment · Medical AI</span><span class="pnote">Production · code proprietary</span></div>
+        <h3>Offline speech-to-report on Jetson AGX</h3>
+        <p>Doctors dictate findings; the system transcribes, structures, and auto-generates a PDF report — with <strong>zero cloud calls</strong>. I migrated it off the OpenAI API (Whisper + GPT-4.1) to a fully offline stack: a medical-domain ASR model plus a quantized <strong>Qwen2.5-7B</strong> on GPU-accelerated <strong>llama.cpp</strong>, served over Flask. Built an eval-driven prompt pipeline — a 50-report golden set, few-shot exemplars, guardrails, and a pathology dictionary that deterministically corrects ASR errors before JSON extraction — reaching <strong>100% structured-field accuracy on the golden set</strong>. Patient data never leaves the device.</p>
+        <div class="pmetric">▸ Cloud API → 100% offline · 100% field accuracy on 50-report golden set</div>
+        <div class="ptags">Jetson AGX · llama.cpp · Qwen2.5-7B (GGUF) · Medical ASR · Prompt eval · Flask</div>
+      </div>
+
+      <!-- Real-time tracking deployment (confirm repo link / whether RNT or personal) -->
+      <div class="proj">
+        <div class="ptop"><span class="pcat">Edge deployment · Tracking</span></div>
+        <h3>Real-time multi-object tracking on edge</h3>
+        <p>Custom ByteTrack multi-object tracking exported through ONNX / TensorRT for low-latency, on-device inference on Jetson AGX Orin.</p>
+        <div class="pmetric">▸ ~3× throughput @ Jetson AGX Orin · &lt;25ms latency</div>
         <div class="ptags">ByteTrack · TensorRT · ONNX · CUDA</div>
-      </a>
+      </div>
 
       <a class="proj" href="https://github.com/shu-bamma/GPU_accelarated_Multi_Agent_Tranjectory_Optimization" target="_blank" rel="noopener">
         <div class="ptop"><span class="pcat">Optimization for ML</span><span class="parrow">↗</span></div>
@@ -507,6 +539,8 @@ footer{padding:50px 0 70px;border-top:1px solid var(--line-2);margin-top:20px}
     </div>
   </div>
 </section>
+
+
 
 <!-- ================= STACK ================= -->
 <section id="stack">
